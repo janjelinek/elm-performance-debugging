@@ -5,7 +5,7 @@
 Simple way how to improve experience from performance profiling and debugging in Elm output code.
 
 Usually during performance profiling you god list of many anonymous function calls and you need to manually go and click through them. 
-But with simple regex aplied on compiled output, you can ged more human friendly names.
+But with simple regex aplied on compiled output, you can get more human friendly names.
 
 ```JavaScript
 /* replace FX nested anonymous functions with simple nesting
@@ -22,7 +22,7 @@ But with simple regex aplied on compiled output, you can ged more human friendly
 */
 
 const rule = /var ([^=]+)( = F\d\([^f]+function)[^(]\(/gmi;
-const replacemend = `var $1$2 __$1( `;
+const replacement = `var $1$2 __$1( `;
 ```
 
 And another aditional expression:
@@ -40,7 +40,7 @@ And another aditional expression:
   And THIS_WILL_BE_REPLACED will be replaced by `___$elm$core$List$foldr`
 */
 consrt rule = /(\sA\d\([\s]+)([^,]+)(,[\s]+)(function[^(]+)\(/gm;
-const replacemend = `$1$2$3$4___$2(`;
+const replacement = `$1$2$3$4___$2(`;
 ```
 
 Example how this can be used with webpack. This code is using `string-replace-loader` webpack loader. 
