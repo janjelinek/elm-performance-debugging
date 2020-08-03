@@ -96,3 +96,8 @@ Example how this can be used with webpack. This code is using `string-replace-lo
   ].filter(x => x), // non-nulls
   }
 }
+```
+
+And here example of performance recording in Chrome dev tools. 
+![Performance recording example]
+(usage-example.png)
