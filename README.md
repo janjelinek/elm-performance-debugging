@@ -1,4 +1,7 @@
 # elm-performance-debugging
+
+:warning: This code could potentially break your Elm output code, so never ever use this for production. It intended only for development purposes :warning: 
+
 Simple way how to improve experience from performance profiling and debugging in Elm output code.
 
 Usually during performance profiling you god list of many anonymous function calls and you need to manually go and click through them. 
